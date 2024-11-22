@@ -39,14 +39,10 @@ namespace KörHenger
             {
                 Henger h2 = new Henger(-1, 30);
             }
-            catch (ArithmeticException e)
+            catch (ArgumentException e)
             {
                 Console.WriteLine($"Aritmetikai hiba{ e.Message}!");
             }
-
-            
-            kiír(h1);
-            kiír(h2);
 
             Console.ReadKey();
         }

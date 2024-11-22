@@ -73,7 +73,7 @@ namespace KörHenger
         {
             if (s <= 0 || m <=0)
             {
-                throw new AccessViolationException("A kör sugara és magassága nem lehet 0 és annál kisebb!");
+                throw new ArgumentException("A kör sugara és magassága nem lehet 0 és annál kisebb!");
             }
             else
             {
