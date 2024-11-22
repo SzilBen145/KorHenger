@@ -16,11 +16,23 @@ namespace KörHenger
 
         public Kör(double r)
         {
+            if (r <= 0)
+            {
+                throw new AccessViolationException("A kör sugara nem lehet 0 és annál kisebb!");
+            }
+            else this.sugar = r;
+
             this.sugar = r;
         }
 
         public void SetSugar(double r)
         {
+            if (r <= 0)
+            {
+                throw new AccessViolationException("A kör sugara nem lehet 0 és annál kisebb!");
+            }
+            else this.sugar = r;
+
             this.sugar = r;
         }
 
@@ -59,9 +71,15 @@ namespace KörHenger
         // Konstruktor
         public Henger(double s, double m)
         {
-            // Változók beállítása
-            this.sugar = s;
-            this.magasság = m;
+            if (s <= 0 || m <=0)
+            {
+                throw new AccessViolationException("A kör sugara és magassága nem lehet 0 és annál kisebb!");
+            }
+            else
+            {
+                this.sugar = s;
+                this.magasság = m;
+            }    
 
             // Számítások elvégzése
             SetKerület();
@@ -73,6 +91,5 @@ namespace KörHenger
         {
             return this.térfogat;
         }
-
     }
 }
