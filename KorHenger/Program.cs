@@ -56,5 +56,7 @@ namespace KörHenger
         {
             Console.WriteLine($"A {k.GetSugár()} sugarú kör kerülete: {k.GetKerület()}, területe: {k.GetTerület()}, térfogata: {k.GetTérfogat()}.");
         }
+
     }
+
 }
